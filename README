@@ -1,0 +1,58 @@
+The program is coded with python3
+Tkinter and JSON library are assumed to be in-built
+
+To compile and execute, use one of these methods:
+Method 1:
+python3 main.py
+
+Method 2: Depends on machine/setup
+python main.py
+
+Method 3:
+chmod +x main.py
+./main.py
+
+About the program:
+- It is part of a log for bookstore keepers to track inventory stocks
+- Features are limited to addition and view of inventory
+- A filter for storybooks is available for view and addition of books as well
+
+Learning Objectives:
+LO1: Best practices for OO development in python
+- The use of inheritance between Book and StoryBook, how storybooks inherits
+    the book class which allows access of reusable values and methods via super
+    found in item.py.
+- The implementation of a graphical interface using tkinter was challenging but
+    can be seen in the addition and view of the list of books in the system.
+    The GUI enabled event driven programming.
+- Lambda was implemented to allow code reuse on buttons to reduce the number of
+    necessary function definitions. These can be found in main.py on functions
+    with "event=None".
+- A collection class Collection has been created to reduce high coupling between
+    model classes to the GUI classes. The storage has been made private for
+    encapsulation purposes.
+
+LO2: Persistence utilization
+- Object details are stored/saved as JSON onto a local file books.json for persistence
+- Sample data are included with books.json, feel free to empty it.
+
+LO3: Portability utilization
+- Object details of all books are generated into JSON which allows portability
+    onto other platforms if desired.
+- String for validation has been printed onto the standard output of the
+    terminal to be copied.
+- Note that string for validation only comprises of non-storybooks not all books
+    as seen in books.json which has both. This is due there only being two
+    different objects dealt within the program.
+
+User Stories:
+- As a bookkeeper, I would like to keep track of inventory.
+- As a bookkeeper, I want to save the inventory to next usage.
+- As a bookkeeper, I want to load the inventory from previous usage.
+- As a bookkeeper, I would like to have the inventory details saved locally.
+
+Notes:
+- Addition of books during filtered view will revert to normal view without unchecking
+- You may press Esc to quit the program
+- Program was tested on a Windows machine via Anaconda Prompt
+- Purposed to learn python3 and tkinter
